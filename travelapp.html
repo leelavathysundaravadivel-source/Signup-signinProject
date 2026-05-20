@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World | Tourist Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#">
+                    <i class="bi bi-compass-fill me-2"></i>TravelApp
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center gap-2">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <button class="btn btn-outline-danger btn-sm fw-bold" onclick="logoutUser()">
+                                <i class="bi bi-box-arrow-right me-1"></i>Logout
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="destinations" class="container py-5 flex-grow-1">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark position-relative d-inline-block pb-2">Popular Destinations</h2>
+            <p class="text-muted">Handpicked getaways curated just for your profile preference</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm tour-card rounded-3 overflow-hidden bg-white">
+                    <div class="position-relative">
+                        <img src="Images/samplpic1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&auto=format&fit=crop&q=60';" class="card-img-top w-100 object-fit-cover" alt="Beach Destination" style="height: 220px;">
+                        <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2 fs-7">Beach Front</span>
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h5 class="card-title fw-bold">Maldives Escape</h5>
+                        <p class="card-text text-muted small">Relax alongside clear blue waters, white sandy beaches, and luxurious overwater villas perfect for couples or solo trips.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                            <span class="fw-bold text-success">$1,200 <small class="text-muted fw-normal">/ person</small></span>
+                            <button class="btn btn-outline-primary btn-sm fw-bold">View details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm tour-card rounded-3 overflow-hidden bg-white">
+                    <div class="position-relative">
+                        <img src="Images/samplepic2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=60';" class="card-img-top w-100 object-fit-cover" alt="Mountain Destination" style="height: 220px;">
+                        <span class="badge bg-success position-absolute top-0 end-0 m-3 px-3 py-2 fs-7">Adventure</span>
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h5 class="card-title fw-bold">Swiss Alps Journey</h5>
+                        <p class="card-text text-muted small">Experience snow-capped mountain ranges, pristine glacial alpine lakes, and premium skiing paths designed for high thrill seekers.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                            <span class="fw-bold text-success">$1,850 <small class="text-muted fw-normal">/ person</small></span>
+                            <button class="btn btn-outline-primary btn-sm fw-bold">View details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm tour-card rounded-3 overflow-hidden bg-white">
+                    <div class="position-relative">
+                        <img src="Images/samplepic3.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&auto=format&fit=crop&q=60';" class="card-img-top w-100 object-fit-cover" alt="Kyoto Destination" style="height: 220px;">
+                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-2 fs-7">Cultural</span>
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h5 class="card-title fw-bold">Kyoto Heritage</h5>
+                        <p class="card-text text-muted small">Walk down historic bamboo pathways, classical wooden temples, and witness standard traditional tea ceremonies in ancient Japan.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                            <span class="fw-bold text-success">$1,450 <small class="text-muted fw-normal">/ person</small></span>
+                            <button class="btn btn-outline-primary btn-sm fw-bold">View details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white-50 py-4 border-top border-secondary mt-auto">
+        <div class="container text-center">
+            <p class="mb-1 small">&copy; 2026 TravelApp Portal Dashboard. All Rights Reserved.</p>
+            <p class="mb-0 small text-white-50">Module-End Assignment Project created by <span class="text-primary fw-bold">Leelavathy</span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
