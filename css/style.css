@@ -1,0 +1,116 @@
+/* Custom Root Layout Overrides */
+
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #333333;
+}
+
+
+/* Form Input Control Transitions */
+
+.form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid #dee2e6;
+    transition: all 0.25s ease-in-out;
+}
+
+
+/* Focus and State Tracking Visualization Ring Elements */
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+.form-control.is-valid {
+    border-color: #198754 !important;
+    background-image: none !important;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545 !important;
+    background-image: none !important;
+}
+
+
+/* Visibility Control Elements */
+
+.input-group .btn {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-width: 2px;
+}
+
+/* 1. Mobile Environments (Devices up to 768px wide) */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+    }
+    .card {
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 1rem !important;
+    }
+    .card-header {
+        border-radius: 1rem 1rem 0 0 !important;
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+}
+
+
+/* 2. Tablet Environments (Devices between 769px and 1024px) */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 1rem;
+    }
+    .card {
+        border-radius: 1.5rem !important;
+    }
+}
+
+
+/* 3. Large Desktop Environments (Devices exceeding 1024px) */
+
+@media (min-width: 1025px) {
+    body {
+        font-size: 1.05rem;
+    }
+    .card {
+        border-radius: 2rem !important;
+    }
+}
+
+
+/* Forces all destination cards to maintain identical structures and match heights */
+
+.tour-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Forces image or placeholder containers to fill out correctly */
+
+.tour-card .card-img-top {
+    border-top-left-radius: calc(0.5rem - 1px);
+    border-top-right-radius: calc(0.5rem - 1px);
+}
+
+
+/* Pushes button row uniformly to the bottom of the card */
+
+.tour-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tour-card .card-body .d-flex.justify-content-between {
+    margin-top: auto !important;
+}
