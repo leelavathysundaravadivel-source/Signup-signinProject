@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // e. Password Boundary Verification (Min 8 Chars, Mixed Alpha-Numeric check)
-            const passRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            const passRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
             if (!passRegex.test(password.value)) {
                 setError(password, "document.getElementById('passwordError')", "Must be at least 8 characters long with letters and numbers.");
                 isValid = false;
